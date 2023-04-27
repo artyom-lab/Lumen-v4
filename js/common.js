@@ -25,6 +25,14 @@ $('body').on('click', '.click-slide', function() {
   $(this).siblings(owl1).trigger('next.owl.carousel');
 });
 
+Waves.attach('.wave', ['waves-light']);
+Waves.attach('.wave2, .dropdown-2 .dropdown-menu a', ['waves-dark']);
+Waves.init();
+
+$(".close-metrics").on("click", function(){
+  $(this).closest(".metric-alert").hide();
+});
+
 $('#sidebar-switcher').on('change', function() {
   if ($(this).is(':checked')) 
     $('.sidebar-2').addClass('sidebar-absolute');
@@ -46,6 +54,8 @@ $("#sandwich-2").on("click", function() {
   $("html").toggleClass("o-hidden");
 });
 
+// DARK-MODE
+
 $('#dark-mode').on('change', function() {
   if ($(this).is(':checked')) {
     $('body').addClass('dark-mode');
@@ -57,21 +67,27 @@ $('#dark-mode').on('change', function() {
   }
 });
 
+// SIDEBAR-1
+
+$(".sidebar-1").hover(function(){
+  $(this).removeClass("sidebar-small");
+});
+
 $(".link-tablist").on("click", function(){
-  // $(".sidebar-1").addClass("w-small");
   if ($(this).hasClass('active')) 
     $('body').toggleClass('menubar-pitches');
   else 
     $('body').addClass('menubar-pitches');
 });
 
-Waves.attach('.wave', ['waves-light']);
-Waves.attach('.wave2, .dropdown-2 .dropdown-menu a', ['waves-dark']);
-Waves.init();
+if (window.matchMedia('(min-width: 1200px)').matches)
+{
+  $(".link-tablist").on("click", function(){
+  $(".sidebar-1").addClass("sidebar-small");
+    });
+}
 
-$(".close-metrics").on("click", function(){
-  $(this).closest(".metric-alert").hide();
-});
+// FORMS
 
 $(".btn-cross").on("click", function(){
   $(".row-hidden").hide();
@@ -82,19 +98,6 @@ $(".news-select").on("click", function(){
   $(this).closest(".dropdown-menu").removeClass("show");
   $(".hidden-store").removeClass("d-none");
   $(".row-hidden").show();
-});
-
-$(".btn-add-info").on("click", function(){
-  $(".edit-box-selection").removeClass("d-none");
-});
-
-$(".btn-add-attribution").on("click", function(){
-  $(".edit-box-attribution").removeClass("d-none");
-});
-
-$(".btn-cancel-close").on("click", function(){
-  $(this).closest(".hidden-store").addClass("d-none");
-  $(".edit-box-selection").addClass("d-none");
 });
 
   $("#v-pills-store-tab").on("click", function(){
@@ -119,6 +122,8 @@ $(".btn-cancel-close").on("click", function(){
     $("#v-pills-store-tab, #v-pills-quote-tab, #v-pills-monthly-tab").addClass("done");
   });
 
+// CHECKBOXES
+
 $(document).ready(function () {
   var count_checked = $('.checkbox-block').find('input:checkbox:checked').length; 
   if (count_checked == 0)  {
@@ -139,6 +144,8 @@ $(document).ready(function () {
     $('.checkbox-block').find('input:checkbox:checked[id=' + $(this).attr('data-id') + ']').prop("checked", false); 
   });
 });
+
+// CALENDAR
 
 $('[data-toggle="popover"]').popover()
 
@@ -164,6 +171,8 @@ $('input[name="birthday1"]').daterangepicker({
 });
 
 });
+
+// DRAG-N-DROP
 
 document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
   const dropZoneElement = inputElement.closest(".drop-zone");

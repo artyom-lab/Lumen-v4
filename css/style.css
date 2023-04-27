@@ -396,22 +396,22 @@ h1, .h1 {
     .sidebar-1 {
       left: -50px;
       right: auto; } }
-  .sidebar-1:hover {
+  .sidebar-1:not(.sidebar-small):hover {
     width: 220px;
     white-space: nowrap; }
     @media (min-width: 1950px) {
-      .sidebar-1:hover {
+      .sidebar-1:not(.sidebar-small):hover {
         width: 330px; } }
-    .sidebar-1:hover .dashboard {
+    .sidebar-1:not(.sidebar-small):hover .dashboard {
       padding: 5px 30px 5px 5px; }
-    .sidebar-1:hover .network {
+    .sidebar-1:not(.sidebar-small):hover .network {
       background: #FFF;
       padding: 10px 30px 10px 5px; }
-    .sidebar-1:hover .dashboard .col, .sidebar-1:hover .dashboard .fa-chevron-right, .sidebar-1:hover .network .col, .sidebar-1:hover .network .fa-chevron-right {
+    .sidebar-1:not(.sidebar-small):hover .dashboard .col, .sidebar-1:not(.sidebar-small):hover .dashboard .fa-chevron-right, .sidebar-1:not(.sidebar-small):hover .network .col, .sidebar-1:not(.sidebar-small):hover .network .fa-chevron-right {
       display: block; }
-    .sidebar-1:hover .accordion-1 .card-body {
+    .sidebar-1:not(.sidebar-small):hover .accordion-1 .card-body {
       display: block; }
-    .sidebar-1:hover .select-user .form-control {
+    .sidebar-1:not(.sidebar-small):hover .select-user .form-control {
       padding: 0 12px 0 35px; }
 
 .network-box {
@@ -2169,13 +2169,15 @@ h1, .h1 {
   color: #404d56;
   display: flex;
   flex-direction: column;
+  border: 1px solid #F1F1F1;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
   z-index: 1039;
   transition: 0.3s;
   background-color: #EFEFF4; }
   .dark-mode .sidebar-edit {
     background: #1c222a;
-    color: #FFF; }
+    color: #FFF;
+    border: 1px solid #313943; }
   @media (min-width: 1950px) {
     .sidebar-edit {
       width: 330px;

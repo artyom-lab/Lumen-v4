@@ -390,27 +390,26 @@ h1, .h1
 	@media (max-width: 991.98px)	
 		left: -50px
 		right: auto
-	&:hover
-		width: 220px
-		white-space: nowrap
-		@media (min-width: 1950px)
-			width: 330px
-		.dashboard
-			padding: 5px 30px 5px 5px
-		.network
-			background: $color-white
-			padding: 10px 30px 10px 5px
-		.dashboard, .network
-			.col, .fa-chevron-right
-				display: block
-		.accordion-1
-			.card-body
-				display: block
-		.select-user
-			.form-control		
-				padding: 0 12px 0 35px
-	// &.w-small
-	// 	width: 50px !important
+	&:not(.sidebar-small)
+		&:hover
+			width: 220px
+			white-space: nowrap
+			@media (min-width: 1950px)
+				width: 330px
+			.dashboard
+				padding: 5px 30px 5px 5px
+			.network
+				background: $color-white
+				padding: 10px 30px 10px 5px
+			.dashboard, .network
+				.col, .fa-chevron-right
+					display: block
+			.accordion-1
+				.card-body
+					display: block
+			.select-user
+				.form-control		
+					padding: 0 12px 0 35px
 
 .network-box
 	padding: 10px
@@ -2211,7 +2210,7 @@ h1, .h1
 				color: $color-white
 				background: $color-checkbox
 
-// NAVIGATION
+// EDIT
 
 .sidebar-edit
 	position: fixed
@@ -2224,6 +2223,7 @@ h1, .h1
 	color: $color-sidebar
 	display: flex
 	flex-direction: column
+	border: 1px solid $color-block
 	box-shadow: 0 6px 6px rgba(0, 0, 0, .2)
 	z-index: 1039
 	transition: $transition
@@ -2231,6 +2231,7 @@ h1, .h1
 	.dark-mode &
 		background: $color-darkmode
 		color: $color-white
+		border: 1px solid $color-border-dark
 	@media (min-width: 1950px)
 		width: 330px
 		left: -330px
