@@ -93,6 +93,14 @@ $(".btn-cross").on("click", function(){
   $(".row-hidden").hide();
 });
 
+$(".btn-cancel-store").on("click", function(){
+  $(".collapse-store").removeClass("show");
+});
+
+$(".btn-cancel-attr").on("click", function(){
+  $(".collapse-attr").removeClass("show");
+});
+
 $(".news-select").on("click", function(){
   $(this).closest(".dropdown").removeClass("show");
   $(this).closest(".dropdown-menu").removeClass("show");
