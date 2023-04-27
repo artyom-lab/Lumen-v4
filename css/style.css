@@ -55,10 +55,10 @@ body {
   @media (min-width: 992px) {
     body.menubar-1 {
       padding-left: 0; }
-      body.menubar-1 .sidebar-1, body.menubar-1 .sidebar-top {
+      body.menubar-1 .sidebar-1, body.menubar-1 .sidebar-top, body.menubar-1 .sidebar-edit {
         margin-left: -220px; } }
     @media (min-width: 992px) and (min-width: 1950px) {
-      body.menubar-1 .sidebar-1, body.menubar-1 .sidebar-top {
+      body.menubar-1 .sidebar-1, body.menubar-1 .sidebar-top, body.menubar-1 .sidebar-edit {
         margin-left: -330px; } }
 
   @media (max-width: 991.98px) {
@@ -68,6 +68,13 @@ body {
         transform: translateX(220px); }
       body.menubar-1 .sidebar-1, body.menubar-1 .content {
         transform: translateX(50px); } }
+  body.menubar-1.menubar-pitches {
+    padding-left: 0 !important; }
+    @media (max-width: 991.98px) {
+      body.menubar-1.menubar-pitches .sidebar-edit {
+        left: 0 !important; }
+      body.menubar-1.menubar-pitches .content {
+        transform: translateX(220px); } }
   @media (max-width: 1399.98px) {
     body.menubar-2 {
       overflow: hidden; }
@@ -77,6 +84,18 @@ body {
       body.menubar-2 .sidebar-1, body.menubar-2 .navbar, body.menubar-2 .content, body.menubar-2 .sidebar-2 {
         transform: translateX(-270px); } }
 
+  body.menubar-pitches {
+    padding-left: 220px; }
+    body.menubar-pitches .sidebar-edit {
+      left: 0; }
+    @media (max-width: 991.98px) {
+      body.menubar-pitches {
+        padding-left: 0; }
+        body.menubar-pitches .sidebar-edit {
+          left: -220px; } }
+    @media (min-width: 1950px) {
+      body.menubar-pitches {
+        padding-left: 330px; } }
   @media (min-width: 1200px) {
     body.body-2 {
       padding-right: 0; } }
@@ -437,7 +456,7 @@ h1, .h1 {
 .accordion-1 .dashboard[aria-expanded="true"] .fa-chevron-right {
   transform: translateY(-50%) rotate(90deg); }
 
-.pitches-border {
+.nav-pills {
   border-top: 2px solid #4a5760; }
 
 .dashboard-box {
@@ -1216,7 +1235,7 @@ h1, .h1 {
   .dark-mode .dropdown-2 .dropdown-menu {
     background: #1c222a;
     color: #FFF; }
-  @media (min-width: 1950.98px) {
+  @media (min-width: 1950px) {
     .dropdown-2 .dropdown-menu {
       transform: translate3d(330px, 0px, 0px) !important; } }
   @media (max-width: 767.98px) {
@@ -2138,5 +2157,32 @@ h1, .h1 {
     transition: 0.3s;
     color: #FFF;
     background: #0081ff; }
+
+.sidebar-edit {
+  position: fixed;
+  width: 220px;
+  top: 62px;
+  bottom: 0;
+  padding: 15px 10px 15px 60px;
+  left: -220px;
+  max-height: 100vh;
+  color: #404d56;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1039;
+  transition: 0.3s;
+  background-color: #EFEFF4; }
+  .dark-mode .sidebar-edit {
+    background: #1c222a;
+    color: #FFF; }
+  @media (min-width: 1950px) {
+    .sidebar-edit {
+      width: 330px;
+      left: -330px; } }
+  @media (max-width: 991.98px) {
+    .sidebar-edit {
+      left: -220px;
+      right: auto; } }
 
 /*# sourceMappingURL=style.css.map */

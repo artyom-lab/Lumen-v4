@@ -57,6 +57,14 @@ $('#dark-mode').on('change', function() {
   }
 });
 
+$(".link-tablist").on("click", function(){
+  // $(".sidebar-1").addClass("w-small");
+  if ($(this).hasClass('active')) 
+    $('body').toggleClass('menubar-pitches');
+  else 
+    $('body').addClass('menubar-pitches');
+});
+
 Waves.attach('.wave', ['waves-light']);
 Waves.attach('.wave2, .dropdown-2 .dropdown-menu a', ['waves-dark']);
 Waves.init();

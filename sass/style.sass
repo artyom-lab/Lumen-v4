@@ -81,7 +81,7 @@ body
 	&.menubar-1
 		@media (min-width: 992px)
 			padding-left: 0
-			.sidebar-1, .sidebar-top
+			.sidebar-1, .sidebar-top, .sidebar-edit
 				margin-left: -220px
 				@media (min-width: 1950px)
 					margin-left: -330px
@@ -91,6 +91,13 @@ body
 				transform: translateX(220px)
 			.sidebar-1, .content
 				transform: translateX(50px)
+		&.menubar-pitches
+			padding-left: 0 !important
+			@media (max-width: 991.98px)
+				.sidebar-edit
+					left: 0 !important
+				.content
+					transform: translateX(220px)
 	&.menubar-2
 		@media (max-width: 1399.98px)
 			overflow: hidden
@@ -98,6 +105,16 @@ body
 				transform: translateX(-300px)
 				@media (max-width: 349.98px)
 					transform: translateX(-270px)
+	&.menubar-pitches
+		padding-left: 220px
+		.sidebar-edit
+			left: 0
+		@media (max-width: 991.98px)
+			padding-left: 0
+			.sidebar-edit
+				left: -220px
+		@media (min-width: 1950px)
+			padding-left: 330px
 	&.body-2
 		@media (min-width: 1200px)
 			padding-right: 0
@@ -392,6 +409,8 @@ h1, .h1
 		.select-user
 			.form-control		
 				padding: 0 12px 0 35px
+	// &.w-small
+	// 	width: 50px !important
 
 .network-box
 	padding: 10px
@@ -438,7 +457,7 @@ h1, .h1
 			.fa-chevron-right
 				transform: translateY(-50%) rotate(90deg)
 
-.pitches-border
+.nav-pills
 	border-top: 2px solid $color-border-light
 
 .dashboard-box
@@ -477,7 +496,7 @@ h1, .h1
 	.sidebar-2-wrap
 		background-color: $color-white
 		.dark-mode &
-			background-color: #252b35
+			background-color: $color-sidebar-darkmode
 		@media (min-width: 1400px)
 			margin-top: 20px
 			margin-bottom: 20px
@@ -655,7 +674,7 @@ h1, .h1
 	height: calc(100% - 20px)
 	background-color: $color-white
 	.dark-mode &
-		background-color: #252b35
+		background-color: $color-sidebar-darkmode
 	@media (max-width: 575.98px)
 		margin-bottom: 15px
 		height: calc(100% - 15px)
@@ -675,35 +694,35 @@ h1, .h1
 .cart-content-2
 	background: linear-gradient(to bottom, #c434fe 0%, #a502ea 100%)
 	.dark-mode &
-		background: #252b35
+		background: $color-sidebar-darkmode
 	.carousel-name-2
 		.dark-mode &
 			color: #b015f1
 .cart-content-3
 	background: linear-gradient(to right, #fe5700 0%, #ff8f2e 100%)
 	.dark-mode &
-		background: #252b35
+		background: $color-sidebar-darkmode
 	.carousel-name-3
 		.dark-mode &
 			color: #fe5700
 .cart-content-4
 	background: linear-gradient(to left, #6ac4fd 0%, #0d96e2 100%)
 	.dark-mode &
-		background: #252b35
+		background: $color-sidebar-darkmode
 	.carousel-name-4
 		.dark-mode &
 			color: #189ce5
 .cart-content-5
 	background: linear-gradient(to left, #05a89d 0%, #67e7d7 100%)
 	.dark-mode &
-		background: #252b35
+		background: $color-sidebar-darkmode
 	.carousel-name-5
 		.dark-mode &
 			color: #05a89d
 .cart-content-6
 	background: linear-gradient(to left, #d6a204 0%, #f7db02 100%)
 	.dark-mode &
-		background: #252b35
+		background: $color-sidebar-darkmode
 	.carousel-name-6
 		.dark-mode &
 			color: #d6a204
@@ -1247,7 +1266,7 @@ h1, .h1
 		.dark-mode &
 			background: $color-darkmode
 			color: $color-white
-		@media (min-width: 1950.98px)
+		@media (min-width: 1950px)
 			transform: translate3d(330px, 0px, 0px) !important
 		@media (max-width: 767.98px)
 			top: calc(100% + .5rem) !important
@@ -2192,3 +2211,29 @@ h1, .h1
 				color: $color-white
 				background: $color-checkbox
 
+// NAVIGATION
+
+.sidebar-edit
+	position: fixed
+	width: 220px
+	top: 62px
+	bottom: 0
+	padding: 15px 10px 15px 60px
+	left: -220px
+	max-height: 100vh
+	color: $color-sidebar
+	display: flex
+	flex-direction: column
+	box-shadow: 0 6px 6px rgba(0, 0, 0, .2)
+	z-index: 1039
+	transition: $transition
+	background-color: #EFEFF4
+	.dark-mode &
+		background: $color-darkmode
+		color: $color-white
+	@media (min-width: 1950px)
+		width: 330px
+		left: -330px
+	@media (max-width: 991.98px)	
+		left: -220px
+		right: auto
