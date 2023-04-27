@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="libs/OwlCarousel/OwlCarousel-22.3.4.css">
 		<link rel="stylesheet" href="libs/OwlCarousel/OwlCarousel-22.3.4-owl.theme.css">
 		<link rel="stylesheet" href="libs/Waves/node-waves-0.7.6.css">
+    <link rel="stylesheet" href="libs/Select2/select2.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
 		<link rel="stylesheet" href="css/style.css">
 	</head>
@@ -573,8 +574,170 @@
 
 	<aside class="sidebar-edit">
     <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade" id="v-pills-pitches" aria-labelledby="v-pills-pitches-tab">1</div>
-      <div class="tab-pane fade" id="v-pills-storywatcher" aria-labelledby="v-pills-storywatcher-tab">2</div>
+
+      <div class="tab-pane fade" id="v-pills-pitches" aria-labelledby="v-pills-pitches-tab">
+    		<div class="title mb-3">
+    			<img src="img/icon-6.png" alt="" width="20" class="mr-1 align-middle">
+    			<span class="align-middle">Pitches</span>
+    		</div>
+    		<button class="btn btn-primary btn-create wave btn-block mb-3">Create New Pitch</button>
+    		<div class="fz-14 mb-2"><b>Index</b></div>
+    		<div class="mb-4">
+    			<div class="mb-1"><b>Status</b></div>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Submitted</span>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Resubmitted</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Rejected</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Interview Request</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Lead</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Write</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Draft</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Fact Checking</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Published</span>
+					</label>
+    		</div>
+    		<div>
+    			<div class="mb-1"><b>Agency</b></div>
+          <div class="select-box">
+            <select class="select2">
+              <option value="" hidden>Search or Select</option>
+              <option value="0">AIC - Internal (2)</option>
+              <option value="1">Metric Media (6)</option>
+              <option value="2">Quigberg Strategy (2)</option>
+              <option value="3">DuPage (2)</option>
+              <option value="4">The Loop (2)</option>
+              <option value="5">Texas Realty (2)</option>
+              <option value="6">Mount Vernon (2)</option>
+              <option value="7">Pipeline (2)</option>
+              <option value="8">Record (2)</option>
+              <option value="9">Cook (2)</option>
+            </select>
+          </div>
+    		</div>
+      </div>
+
+      <div class="tab-pane fade" id="v-pills-storywatcher" aria-labelledby="v-pills-storywatcher-tab">
+    		<div class="title mb-3">
+    			<img src="img/icon-29.png" alt="" width="20" class="mr-1 align-middle">
+    			<span class="align-middle">Stories</span>
+    		</div>
+    		<button class="btn btn-primary btn-create wave btn-block mb-3">Create New Story</button>
+    		<div class="fz-14 mb-2"><b>Index</b></div>
+    		<div class="mb-4">
+    			<div class="mb-1"><b>Status</b></div>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Submitted</span>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Resubmitted</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Rejected</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Interview Request</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Lead</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Write</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Draft</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Fact Checking</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Published</span>
+					</label>
+    		</div>
+    		<div>
+    			<div class="mb-1"><b>Agency</b></div>
+          <div class="select-box">
+            <select class="select2">
+              <option value="" hidden>Search or Select</option>
+              <option value="0">AIC - Internal (2)</option>
+              <option value="1">Metric Media (6)</option>
+              <option value="2">Quigberg Strategy (2)</option>
+              <option value="3">DuPage (2)</option>
+              <option value="4">The Loop (2)</option>
+              <option value="5">Texas Realty (2)</option>
+              <option value="6">Mount Vernon (2)</option>
+              <option value="7">Pipeline (2)</option>
+              <option value="8">Record (2)</option>
+              <option value="9">Cook (2)</option>
+            </select>
+          </div>
+    		</div>
+      </div>
     </div>
 	</aside>
 
@@ -1430,6 +1593,7 @@
 		<script src="libs/Popper/popper.js-1.14.7.js"></script>
 		<script src="libs/Bootstrap/bootstrap-4.3.1.js"></script>
 		<script src="libs/OwlCarousel/OwlCarousel-22.3.4.js"></script>
+		<script src="libs/Select2/select2.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 		<script src="libs/Waves/node-waves-0.7.6.js"></script>

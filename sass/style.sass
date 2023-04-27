@@ -16,6 +16,7 @@ $bg-gray: #f1f1f6
 $bg-gray-2: #f6f6fb
 $color-darkmode: #1c222a
 $color-darkmode2: #1a1d21
+$bg-body: #EFEFF4
 $bg-darkmode: #313946
 $color-body: #222222
 $color-sidebar: #404d56
@@ -65,7 +66,7 @@ body
 	padding-top: 62px
 	position: relative
 	color: $color-body
-	background-color: #EFEFF4
+	background-color: $bg-body
 	@media (min-width: 1950px)
 		font-size: 15px
 	&.dark-mode 
@@ -101,7 +102,7 @@ body
 	&.menubar-2
 		@media (max-width: 1399.98px)
 			overflow: hidden
-			.sidebar-1, .navbar, .content, .sidebar-2
+			.sidebar-1, .navbar, .content, .sidebar-2, .sidebar-edit
 				transform: translateX(-300px)
 				@media (max-width: 349.98px)
 					transform: translateX(-270px)
@@ -312,6 +313,8 @@ h1, .h1
 	overflow: auto
 	&::-webkit-scrollbar
 		display: none
+	.nav-pills
+		border-top: 2px solid $color-border-light
 	.accordion-wrap
 		padding: 10px
 		.dashboard
@@ -455,9 +458,6 @@ h1, .h1
 		&[aria-expanded="true"]
 			.fa-chevron-right
 				transform: translateY(-50%) rotate(90deg)
-
-.nav-pills
-	border-top: 2px solid $color-border-light
 
 .dashboard-box
 	width: 20px
@@ -2114,6 +2114,21 @@ h1, .h1
 					left: 50%
 					transform: translate(-50%, -50%)
 					border-radius: 100px
+	&.label-small
+		margin-bottom: 2px
+		input[type="checkbox"], input[type="radio"]
+			~ .f
+				width: 14px
+				height: 14px
+				background: $color-white
+			&:checked
+				~ .f
+					&:before 
+						content: ''
+						width: 10px	
+						height: 10px
+						background: $color-checkbox
+						border: 2px solid #fff
 
 .form-store
 	input
@@ -2227,7 +2242,7 @@ h1, .h1
 	box-shadow: 0 6px 6px rgba(0, 0, 0, .2)
 	z-index: 1039
 	transition: $transition
-	background-color: #EFEFF4
+	background-color: $bg-body
 	.dark-mode &
 		background: $color-darkmode
 		color: $color-white
@@ -2238,3 +2253,110 @@ h1, .h1
 	@media (max-width: 991.98px)	
 		left: -220px
 		right: auto
+	.title
+		color: $color-black
+		text-transform: uppercase
+		font-weight: bold 
+		font-size: 14px
+		.dark-mode &
+			color: $color-white
+	.btn-create
+		font-size: 13px
+		background: $color-checkbox
+		padding: 4px 12px
+		transition: $transition
+		border-radius: 5px
+		font-weight: 500
+
+.select2-container
+	display: block
+	width: auto !important
+	.select2-selection--single
+		background: $color-white
+		border: 1px solid $color-border-2
+		padding: 0px 12px
+		transition: $transition
+		height: 40px
+		box-shadow: 0 2px 3px rgba(0, 0, 0, .15)
+		.dark-mode &
+			background: $bg-darkmode
+			border: 1px solid $color-rgba
+		.select2-selection__rendered
+			padding-left: 0
+			padding-right: 0
+	.selection
+		display: block
+.select2-container--default .select2-selection--single
+	border-radius: 5px
+	.select2-selection__rendered
+		color: $color-black
+		line-height: 40px
+		font-size: 12px
+		.dark-mode &
+			color: $color-white
+	.select2-selection__arrow
+		display: none
+.select2-results__options
+	> li:first-child:not([role="alert"])
+		display: none
+.select2-container--open 
+	.select2-dropdown
+		border: 1px solid $color-border-2
+		border-radius: 5px
+		overflow: hidden
+		padding: 4px
+		top: -40px
+		padding: 0
+		z-index: 1039
+		.select2-search--dropdown
+			padding: 0
+			.select2-search__field
+				border: 0
+				border-bottom: 1px solid $color-border-2
+				color: $color-black
+				border-radius: 5px 5px 0 0
+				padding: 4px 12px
+				height: 40px
+				font-size: 12px
+				.dark-mode &
+					color: $color-white
+					background: $bg-darkmode
+		.select2-results
+			padding: 4px
+			.dark-mode &
+				background: $bg-darkmode
+			.select2-results__options
+				max-height: 130px
+				padding: 0 4px
+				&::-webkit-scrollbar
+					width: 4px
+					height: 4px
+				&::-webkit-scrollbar-track
+					background-color: transparent
+					border-radius: 2px
+				&::-webkit-scrollbar-thumb
+					background-color: $color-scroll
+					border-radius: 2px	
+					.dark-mode & 
+						background-color: $color-darkmode2
+				.select2-results__option
+					font-size: 12px
+					padding: 4px 6px
+					white-space: nowrap
+					text-overflow: ellipsis
+					overflow: hidden
+					color: $color-black
+					background-color: transparent
+					.dark-mode &
+						color: $color-white
+						background: $bg-darkmode
+				.select2-results__option--highlighted.select2-results__option--selectable
+					background: transparent
+					&:hover, &.select2-results__option--selected
+						background-color: $bg-body
+						border-radius: 5px
+						border: 1px solid $color-border-2
+						font-weight: bold
+						.dark-mode & 
+							background-color: $color-darkmode
+							border: 1px solid $color-rgba

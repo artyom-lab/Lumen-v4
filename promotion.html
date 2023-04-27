@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 		<link rel="stylesheet" href="libs/OwlCarousel/OwlCarousel-22.3.4.css">
 		<link rel="stylesheet" href="libs/OwlCarousel/OwlCarousel-22.3.4-owl.theme.css">
+		<link rel="stylesheet" href="libs/Select2/select2.css">
 		<link rel="stylesheet" href="libs/Waves/node-waves-0.7.6.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
 		<link rel="stylesheet" href="css/style.css">
@@ -15,774 +16,958 @@
 	
 	<body class="body-2">
 
-		<aside class="sidebar-1">
-			<div class="sidebar-top">
-				<div class="row align-items-center">
-					<div class="col">
-						<span class="logo-img"></span>
-						<a class="logo" href="index.html">
-							Lumen
-						</a>
-					</div>
-					<div class="col-auto">
-						<button class="sandwich" id="sandwich-1">
-							<span></span>
-						</button>
-					</div>
-				</div>
-			</div>
-
-			<div class="network-box">
-				<div class="dropdown dropdown-2 dropright">
-					<a href="#!" class="network wave2 dropdown-toggle" data-toggle="dropdown">
-						<div class="row row-1 align-items-center">
-							<div class="col-auto">
+	<aside class="sidebar-1">
+		<div class="network-box">
+			<div class="dropdown dropdown-2 dropright">
+				<a href="#!" class="network wave2 dropdown-toggle" data-toggle="dropdown">
+					<div class="row row-1 align-items-center flex-nowrap">
+						<div class="col-auto">
+							<div class="dashboard-box">
 								<img src="img/icon-network.png" class="fz-0" alt="" width="20">
 							</div>
-							<div class="col">
-								<div class="font-weight-bold fz-14 lh-1">St. Joseph County</div>
-								<div class="fz-11">Legal Journals</div>
-							</div>
 						</div>
-						<i class="fas fa-chevron-right"></i>
-					</a>
+						<div class="col">
+							<div class="font-weight-bold fz-14 lh-1">St. Joseph County</div>
+							<div class="fz-11">Legal Journals</div>
+						</div>
+					</div>
+					<i class="fas fa-chevron-right"></i>
+				</a>
 
-				  <div class="dropdown-menu fz-12 py-0" aria-labelledby="dropdownMenuButton">
-					<div class="dropdown-2-head">
-							<div class="nav nav-tabs justify-content-around justify-content-lg-between">
-								<a class="nav-link active" data-toggle="tab" href="#tab1">PROJECTS</a>
-								<a class="nav-link" data-toggle="tab" href="#tab2">AGENCIES</a>
-						</div>
-					</div>
-					<div class="dropdown-2-body">
-							<div class="tab-content">
-								<div class="tab-pane fade show active" id="tab1">
-									<div class="row">
-										<div class="col-6">
-											<div class="text-center font-weight-bold pb-3">Networks</div>
-											<div class="tab-box">
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="1">
-													<span>Project Name #1</span>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="2">
-													<span>Project Name #2</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="3" checked="">
-													<span>Project Name #3</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="4">
-													<span>Project Name #4</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="5" checked="">
-													<span>Project Name #5</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="6">
-													<span>Project Name #6</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="7">
-													<span>Project Name #7</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="8">
-													<span>Project Name #8</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="9">
-													<span>Project Name #9</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="10">
-													<span>Project Name #10</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="11">
-													<span>Project Name #11</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="12">
-													<span>Project Name #12</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="13">
-													<span>Project Name #13</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="14">
-													<span>Project Name #14</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="15">
-													<span>Project Name #15</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network" value="16">
-													<span>Project Name #16</span>
-												</label>
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="text-center font-weight-bold pb-3">Projects</div>
-											<div class="tab-box">
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="1">
-													<span>Project Name #1</span>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="2">
-													<span>Project Name #2</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="3">
-													<span>Project Name #3</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="4">
-													<span>Project Name #4</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="5">
-													<span>Project Name #5</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="6" checked="">
-													<span>Project Name #6</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="7">
-													<span>Project Name #7</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="8">
-													<span>Project Name #8</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="9">
-													<span>Project Name #9</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="10">
-													<span>Project Name #10</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="11">
-													<span>Project Name #11</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="12">
-													<span>Project Name #12</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="13">
-													<span>Project Name #13</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="14">
-													<span>Project Name #14</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="15">
-													<span>Project Name #15</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="project" value="16">
-													<span>Project Name #16</span>
-												</label>
-											</div>
+			  <div class="dropdown-menu fz-12 py-0" aria-labelledby="dropdownMenuButton">
+			  	<div class="dropdown-2-head">
+						<div class="nav nav-tabs justify-content-around justify-content-lg-between">
+							<a class="nav-link active" data-toggle="tab" href="#tab1">PROJECTS</a>
+							<a class="nav-link" data-toggle="tab" href="#tab2">AGENCIES</a>
+			    	</div>
+			  	</div>
+			  	<div class="dropdown-2-body">
+						<div class="tab-content">
+							<div class="tab-pane fade show active" id="tab1">
+								<div class="row">
+									<div class="col-6">
+										<div class="text-center font-weight-bold pb-3">Networks</div>
+										<div class="tab-box">
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="1">
+												<span>Project Name #1</span>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="2">
+												<span>Project Name #2</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="3" checked="">
+												<span>Project Name #3</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="4">
+												<span>Project Name #4</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="5" checked="">
+												<span>Project Name #5</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="6">
+												<span>Project Name #6</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="7">
+												<span>Project Name #7</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="8">
+												<span>Project Name #8</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="9">
+												<span>Project Name #9</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="10">
+												<span>Project Name #10</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="11">
+												<span>Project Name #11</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="12">
+												<span>Project Name #12</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="13">
+												<span>Project Name #13</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="14">
+												<span>Project Name #14</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="15">
+												<span>Project Name #15</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network" value="16">
+												<span>Project Name #16</span>
+											</label>
 										</div>
 									</div>
-								</div>
-								<div class="tab-pane fade" id="tab2">
-									<div class="row">
-										<div class="col-6">
-											<div class="text-center font-weight-bold pb-3">Networks</div>
-											<div class="tab-box">
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="1">
-													<span>Agency Name #1</span>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="2">
-													<span>Agency Name #2</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="3">
-													<span>Agency Name #3</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="4">
-													<span>Agency Name #4</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="5">
-													<span>Agency Name #5</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="6">
-													<span>Agency Name #6</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="7">
-													<span>Agency Name #7</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="8">
-													<span>Agency Name #8</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="9">
-													<span>Agency Name #9</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="10">
-													<span>Agency Name #10</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="11">
-													<span>Agency Name #11</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="12">
-													<span>Agency Name #12</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="13">
-													<span>Agency Name #13</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="14">
-													<span>Agency Name #14</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="15">
-													<span>Agency Name #15</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="network2" value="16">
-													<span>Agency Name #16</span>
-												</label>
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="text-center font-weight-bold pb-3">Agencies</div>
-											<div class="tab-box">
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="1">
-													<span>Agency Name #1</span>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="2">
-													<span>Agency Name #2</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="3">
-													<span>Agency Name #3</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="4">
-													<span>Agency Name #4</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="5">
-													<span>Agency Name #5</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="6">
-													<span>Agency Name #6</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="7">
-													<span>Agency Name #7</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="8">
-													<span>Agency Name #8</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="9">
-													<span>Agency Name #9</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="10">
-													<span>Agency Name #10</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="11">
-													<span>Agency Name #11</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="12">
-													<span>Agency Name #12</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="13">
-													<span>Agency Name #13</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="14">
-													<span>Agency Name #14</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="15">
-													<span>Agency Name #15</span>
-												</label>
-												</label>
-												<label class="radio-group">
-													<input type="checkbox" name="agency" value="16">
-													<span>Agency Name #16</span>
-												</label>
-											</div>
+									<div class="col-6">
+										<div class="text-center font-weight-bold pb-3">Projects</div>
+										<div class="tab-box">
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="1">
+												<span>Project Name #1</span>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="2">
+												<span>Project Name #2</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="3">
+												<span>Project Name #3</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="4">
+												<span>Project Name #4</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="5">
+												<span>Project Name #5</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="6" checked="">
+												<span>Project Name #6</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="7">
+												<span>Project Name #7</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="8">
+												<span>Project Name #8</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="9">
+												<span>Project Name #9</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="10">
+												<span>Project Name #10</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="11">
+												<span>Project Name #11</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="12">
+												<span>Project Name #12</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="13">
+												<span>Project Name #13</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="14">
+												<span>Project Name #14</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="15">
+												<span>Project Name #15</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="project" value="16">
+												<span>Project Name #16</span>
+											</label>
 										</div>
 									</div>
 								</div>
 							</div>
-					</div>
-				  </div>
-				</div>
+							<div class="tab-pane fade" id="tab2">
+								<div class="row">
+									<div class="col-6">
+										<div class="text-center font-weight-bold pb-3">Networks</div>
+										<div class="tab-box">
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="1">
+												<span>Agency Name #1</span>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="2">
+												<span>Agency Name #2</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="3">
+												<span>Agency Name #3</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="4">
+												<span>Agency Name #4</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="5">
+												<span>Agency Name #5</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="6">
+												<span>Agency Name #6</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="7">
+												<span>Agency Name #7</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="8">
+												<span>Agency Name #8</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="9">
+												<span>Agency Name #9</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="10">
+												<span>Agency Name #10</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="11">
+												<span>Agency Name #11</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="12">
+												<span>Agency Name #12</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="13">
+												<span>Agency Name #13</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="14">
+												<span>Agency Name #14</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="15">
+												<span>Agency Name #15</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="network2" value="16">
+												<span>Agency Name #16</span>
+											</label>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="text-center font-weight-bold pb-3">Agencies</div>
+										<div class="tab-box">
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="1">
+												<span>Agency Name #1</span>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="2">
+												<span>Agency Name #2</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="3">
+												<span>Agency Name #3</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="4">
+												<span>Agency Name #4</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="5">
+												<span>Agency Name #5</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="6">
+												<span>Agency Name #6</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="7">
+												<span>Agency Name #7</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="8">
+												<span>Agency Name #8</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="9">
+												<span>Agency Name #9</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="10">
+												<span>Agency Name #10</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="11">
+												<span>Agency Name #11</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="12">
+												<span>Agency Name #12</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="13">
+												<span>Agency Name #13</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="14">
+												<span>Agency Name #14</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="15">
+												<span>Agency Name #15</span>
+											</label>
+											</label>
+											<label class="radio-group">
+												<input type="checkbox" name="agency" value="16">
+												<span>Agency Name #16</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+			  	</div>
+			  </div>
 			</div>
-
-			<div class="sidebar-bottom">
-
-				<nav class="accordion-wrap">
+		</div>
+		<div class="sidebar-bottom">
+			<nav class="accordion-wrap">
+				<div>
 					<a href="#!" class="dashboard wave">
-						<div class="row row-1 align-items-center">
+						<div class="row row-1 align-items-center flex-nowrap">
 							<div class="col-auto">
-								<img src="img/icon-1.png" class="fz-0" alt="" width="20">
+								<div class="dashboard-box">
+									<img src="img/icon-1.png" class="fz-0" alt="">
+								</div>
 							</div>
 							<div class="col text-uppercase">Dashboard</div>
 						</div>
 					</a>
-
-					<div class="accordion accordion-1" id="accordionExample">
-						<div class="pt-2">
-							<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseOne">
-								<div class="row row-1 align-items-center">
-									<div class="col-auto">
-										<img src="img/icon-2.png" class="fz-0" alt="" width="20">
-									</div>
-									<div class="col text-uppercase">Audience</div>
-								</div>
-								<i class="fas fa-chevron-right"></i>
-							</a>
-							<div id="collapseOne" class="collapse" data-parent="#accordionExample">
-								<div class="card-body">
-									<a href="#!">Traffic</a> 
-									<a href="#!">Geography</a> 
-									<a href="stories-index.html">Stories</a> 
+				</div>
+				<div class="mt-2">
+					<a href="#!" class="dashboard wave">
+						<div class="row row-1 align-items-center flex-nowrap">
+							<div class="col-auto">
+								<div class="dashboard-box">
+									<img src="img/icon-home.png" class="fz-0" alt="">
 								</div>
 							</div>
+							<div class="col text-uppercase">Home</div>
 						</div>
-
-						<div class="pt-2">
-							<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseTwo">
-								<div class="row row-1 align-items-center">
-									<div class="col-auto">
-										<img src="img/icon-3.png" class="fz-0" alt="" width="20">
+					</a>
+				</div>
+				<div class="accordion accordion-1" id="accordionExample">
+					<div class="mt-2">
+						<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseOne">
+							<div class="row row-1 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+										<img src="img/icon-2.png" class="fz-0" alt="">
 									</div>
-									<div class="col text-uppercase">Influencers</div>
 								</div>
-								<i class="fas fa-chevron-right"></i>
-							</a>
-							<div id="collapseTwo" class="collapse" data-parent="#accordionExample">
-								<div class="card-body">
-									<a href="org-index.html">Organizations</a> 
-									<a href="#!">Types</a> 
-								</div>
+								<div class="col text-uppercase">Audience</div>
 							</div>
-						</div>
-
-						<div class="pt-2">
-							<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseThree">
-								<div class="row row-1 align-items-center">
-									<div class="col-auto">
-										<img src="img/icon-4.png" class="fz-0" alt="" width="20">
-									</div>
-									<div class="col text-uppercase">Newsletters</div>
-								</div>
-								<i class="fas fa-chevron-right"></i>
-							</a>
-							<div id="collapseThree" class="collapse" data-parent="#accordionExample">
-								<div class="card-body">
-									<a href="#!">Campaigns</a> 
-									<a href="#!">Subscriptions</a> 
-								</div>
-							</div>
-						</div>
-
-						<div class="pt-2">
-							<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseFour">
-								<div class="row row-1 align-items-center">
-									<div class="col-auto">
-										<img src="img/icon-5.png" class="fz-0" alt="" width="20">
-									</div>
-									<div class="col text-uppercase">Social</div>
-								</div>
-								<i class="fas fa-chevron-right"></i>
-							</a>
-							<div id="collapseFour" class="collapse" data-parent="#accordionExample">
-								<div class="card-body">
-									<a href="#!">Sharing</a> 
-									<a href="#!">Campaigns</a> 
-								</div>
-							</div>
-						</div>
-
-						<div class="pt-2">
-							<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseFive">
-								<div class="row row-1 align-items-center">
-									<div class="col-auto">
-										<img src="img/icon-7.png" class="fz-0" alt="" width="20">
-									</div>
-									<div class="col text-uppercase">Alerts</div>
-								</div>
-								<i class="fas fa-chevron-right"></i>
-							</a>
-							<div id="collapseFive" class="collapse" data-parent="#accordionExample">
-								<div class="card-body">
-									<a href="#!">Sent</a> 
-									<a href="#!">Sign-ups</a> 
-								</div>
-							</div>
-						</div>
-
-						<div class="pt-2 mt-xl-4">
-							<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseSix">
-								<div class="row row-1 align-items-center">
-									<div class="col-auto">
-										<img src="img/icon-6.png" class="fz-0" alt="" width="20">
-									</div>
-									<div class="col text-uppercase">Pitches</div>
-								</div>
-								<i class="fas fa-chevron-right"></i>
-							</a>
-							<div id="collapseSix" class="collapse" data-parent="#accordionExample">
-								<div class="card-body">
-									<a href="#!">Pitch 1</a> 
-									<a href="#!">Pitch 2</a> 
-								</div>
-							</div>
-						</div>
-
-						<div class="pt-2">
-							<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseSeven">
-								<div class="row row-1 align-items-center">
-									<div class="col-auto">
-										<img src="img/icon-29.png" class="fz-0" alt="" width="20">
-									</div>
-									<div class="col text-uppercase">Story Watcher</div>
-								</div>
-								<i class="fas fa-chevron-right"></i>
-							</a>
-							<div id="collapseSeven" class="collapse" data-parent="#accordionExample">
-								<div class="card-body">
-									<a href="#!">Story Watcher 1</a> 
-									<a href="#!">Story Watcher 2</a> 
-								</div>
-							</div>
-						</div>
-
-						<div class="pt-2">
-							<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseEight">
-								<div class="row row-1 align-items-center">
-									<div class="col-auto">
-										<img src="img/icon-8.png" class="fz-0" alt="" width="20">
-									</div>
-									<div class="col text-uppercase">Administration</div>
-								</div>
-								<i class="fas fa-chevron-right"></i>
-							</a>
-							<div id="collapseEight" class="collapse" data-parent="#accordionExample">
-								<div class="card-body">
-									<a href="#!">Users</a> 
-									<a href="#!">Accounts</a> 
-								</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseOne" class="collapse" data-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Traffic</a> 
+								<a href="#!">Geography</a> 
+								<a href="stories-index.html">Stories</a> 
 							</div>
 						</div>
 					</div>
 
-					<div class="select-user mt-xl-5">
-						<input type="text" class="form-control" placeholder="Select a User">
-						<img src="img/icon-9.png" class="fz-0 input-icon" alt="" width="20">
+					<div class="mt-2">
+						<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseTwo">
+							<div class="row row-1 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+										<img src="img/icon-3.png" class="fz-0" alt="">
+									</div>
+								</div>
+								<div class="col text-uppercase">Influencers</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseTwo" class="collapse" data-parent="#accordionExample">
+							<div class="card-body">
+								<a href="org-index.html">Organizations</a> 
+								<a href="#!">Types</a> 
+							</div>
+						</div>
 					</div>
 
-				</nav>
-				
+					<div class="mt-2">
+						<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseThree">
+							<div class="row row-1 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+										<img src="img/icon-4.png" class="fz-0" alt="">
+									</div>
+								</div>
+								<div class="col text-uppercase">Newsletters</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseThree" class="collapse" data-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Campaigns</a> 
+								<a href="#!">Subscriptions</a> 
+							</div>
+						</div>
+					</div>
+
+					<div class="mt-2">
+						<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseFour">
+							<div class="row row-1 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+										<img src="img/icon-5.png" class="fz-0" alt="">
+									</div>
+								</div>
+								<div class="col text-uppercase">Social</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseFour" class="collapse" data-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Sharing</a> 
+								<a href="#!">Campaigns</a> 
+							</div>
+						</div>
+					</div>
+
+					<div class="mt-2">
+						<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseFive">
+							<div class="row row-1 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+										<img src="img/icon-7.png" class="fz-0" alt="">
+									</div>
+								</div>
+								<div class="col text-uppercase">Alerts</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseFive" class="collapse" data-parent="#accordionExample">
+							<div class="card-body">
+								<a href="#!">Sent</a> 
+								<a href="#!">Sign-ups</a> 
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="nav flex-column nav-pills pt-3 mt-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<a class="dashboard nav-link link-tablist wave" id="v-pills-pitches-tab" data-toggle="pill" href="#v-pills-pitches" aria-controls="v-pills-pitches">
+						<div class="row row-1 align-items-center flex-nowrap">
+							<div class="col-auto">
+								<div class="dashboard-box">
+									<img src="img/icon-6.png" class="fz-0" alt="">
+								</div>
+							</div>
+							<div class="col text-uppercase">Pitches</div>
+						</div>
+					</a>
+					<a class="dashboard nav-link link-tablist mt-2 wave" id="v-pills-storywatcher-tab" data-toggle="pill" href="#v-pills-storywatcher" aria-controls="v-pills-storywatcher">
+						<div class="row row-1 align-items-center flex-nowrap">
+							<div class="col-auto">
+								<div class="dashboard-box">
+									<img src="img/icon-29.png" class="fz-0" alt="">
+								</div>
+							</div>
+							<div class="col text-uppercase">Story Watcher</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="accordion accordion-1" id="accordionExample2">
+					<div class="mt-2">
+						<a href="#!" class="dashboard wave" data-toggle="collapse" data-target="#collapseEight">
+							<div class="row row-1 align-items-center flex-nowrap">
+								<div class="col-auto">
+									<div class="dashboard-box">
+										<img src="img/icon-8.png" class="fz-0" alt="">
+									</div>
+								</div>
+								<div class="col text-uppercase">Administration</div>
+							</div>
+							<i class="fas fa-chevron-right"></i>
+						</a>
+						<div id="collapseEight" class="collapse" data-parent="#accordionExample2">
+							<div class="card-body">
+								<a href="#!">Users</a> 
+								<a href="#!">Accounts</a> 
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="select-user mt-xl-5">
+					<input type="text" class="form-control" placeholder="Select a User">
+					<img src="img/icon-9.png" class="fz-0 input-icon" alt="" width="20">
+				</div>
+
+			</nav>
+			
+		</div>
+	</aside>
+
+	<aside class="sidebar-edit">
+    <div class="tab-content" id="v-pills-tabContent">
+
+      <div class="tab-pane fade" id="v-pills-pitches" aria-labelledby="v-pills-pitches-tab">
+    		<div class="title mb-3">
+    			<img src="img/icon-6.png" alt="" width="20" class="mr-1 align-middle">
+    			<span class="align-middle">Pitches</span>
+    		</div>
+    		<button class="btn btn-primary btn-create wave btn-block mb-3">Create New Pitch</button>
+    		<div class="fz-14 mb-2"><b>Index</b></div>
+    		<div class="mb-4">
+    			<div class="mb-1"><b>Status</b></div>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Submitted</span>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Resubmitted</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Rejected</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Interview Request</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Lead</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Write</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Draft</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Fact Checking</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="status1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Published</span>
+					</label>
+    		</div>
+    		<div>
+    			<div class="mb-1"><b>Agency</b></div>
+          <div class="select-box">
+            <select class="select2">
+              <option value="" hidden>Search or Select</option>
+              <option value="0">AIC - Internal (2)</option>
+              <option value="1">Metric Media (6)</option>
+              <option value="2">Quigberg Strategy (2)</option>
+              <option value="3">DuPage (2)</option>
+              <option value="4">The Loop (2)</option>
+              <option value="5">Texas Realty (2)</option>
+              <option value="6">Mount Vernon (2)</option>
+              <option value="7">Pipeline (2)</option>
+              <option value="8">Record (2)</option>
+              <option value="9">Cook (2)</option>
+            </select>
+          </div>
+    		</div>
+      </div>
+
+      <div class="tab-pane fade" id="v-pills-storywatcher" aria-labelledby="v-pills-storywatcher-tab">
+    		<div class="title mb-3">
+    			<img src="img/icon-29.png" alt="" width="20" class="mr-1 align-middle">
+    			<span class="align-middle">Stories</span>
+    		</div>
+    		<button class="btn btn-primary btn-create wave btn-block mb-3">Create New Story</button>
+    		<div class="fz-14 mb-2"><b>Index</b></div>
+    		<div class="mb-4">
+    			<div class="mb-1"><b>Status</b></div>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Submitted</span>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Resubmitted</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Rejected</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Interview Request</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Lead</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Write</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Draft</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Fact Checking</span>
+					</label>
+					</label><br>
+					<label class="label-store label-small">       
+					  <input type="checkbox" name="story1">
+					  <span class="align-middle f"></span>
+					  <span class="align-middle ml-1">Published</span>
+					</label>
+    		</div>
+    		<div>
+    			<div class="mb-1"><b>Agency</b></div>
+          <div class="select-box">
+            <select class="select2">
+              <option value="" hidden>Search or Select</option>
+              <option value="0">AIC - Internal (2)</option>
+              <option value="1">Metric Media (6)</option>
+              <option value="2">Quigberg Strategy (2)</option>
+              <option value="3">DuPage (2)</option>
+              <option value="4">The Loop (2)</option>
+              <option value="5">Texas Realty (2)</option>
+              <option value="6">Mount Vernon (2)</option>
+              <option value="7">Pipeline (2)</option>
+              <option value="8">Record (2)</option>
+              <option value="9">Cook (2)</option>
+            </select>
+          </div>
+    		</div>
+      </div>
+    </div>
+	</aside>
+
+	<header class="navbar navbar-light bg-white fixed-top">
+		<div class="sidebar-top">
+			<div class="row align-items-center">
+				<div class="col">
+					<span class="logo-img"></span>
+					<a class="logo" href="index.html">
+						Lumen
+					</a>
+				</div>
+				<div class="col-auto">
+					<button class="sandwich" id="sandwich-1">
+						<span></span>
+					</button>
+				</div>
 			</div>
-		</aside>
-
-		<header class="navbar navbar-light bg-white fixed-top">
-      <form class="form-inline form-dropdown dropdown d-none d-md-inline-block">
-        <input class="form-control fz-13 dropdown-toggle" data-toggle="dropdown" type="text" placeholder="DuPage County Commissioner">
-        <button class="fas fa-search"></button>
-        <div class="dropdown-menu search-dropdown w-100">
-        	<div class="loc-border pr-2">
-	          <div class="search-inside">
-	          	<div class="news-box">
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<img src="img/news.png" alt="" width="18">
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<div class="w-18"></div>
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<img src="img/news.png" alt="" width="18">
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<img src="img/news.png" alt="" width="18">
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<div class="w-18"></div>
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<img src="img/news.png" alt="" width="18">
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<img src="img/news.png" alt="" width="18">
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<div class="w-18"></div>
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<img src="img/news.png" alt="" width="18">
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<div class="w-18"></div>
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<img src="img/news.png" alt="" width="18">
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<div class="w-18"></div>
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<img src="img/news.png" alt="" width="18">
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          		<a href="#!" class="news">
-	          			<div class="row row-1">
-	          				<div class="col-auto">
-	          					<div class="w-18"></div>
-	          				</div>
-	          				<div class="col">
-	          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
-	          					<span class="d-block">DuPage Policy Journal</span>
-	          				</div>
-	          				<div class="col-2 date">Jan. 14, 2021</div>
-	          			</div>
-	          		</a>
-	          	</div>
-	          </div>
+		</div>
+    <form class="form-inline form-dropdown dropdown d-none d-md-inline-block">
+      <input class="form-control fz-13 dropdown-toggle" data-toggle="dropdown" type="text" placeholder="DuPage County Commissioner">
+      <button class="fas fa-search"></button>
+      <div class="dropdown-menu search-dropdown w-100">
+      	<div class="loc-border pr-2">
+          <div class="search-inside">
+          	<div class="news-box">
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<img src="img/news.png" alt="" width="18">
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<div class="w-18"></div>
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<img src="img/news.png" alt="" width="18">
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<img src="img/news.png" alt="" width="18">
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<div class="w-18"></div>
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<img src="img/news.png" alt="" width="18">
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<img src="img/news.png" alt="" width="18">
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<div class="w-18"></div>
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<img src="img/news.png" alt="" width="18">
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<div class="w-18"></div>
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<img src="img/news.png" alt="" width="18">
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<div class="w-18"></div>
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<img src="img/news.png" alt="" width="18">
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">DuPage County Commissioner sed do eiusmod tempor incididunt ut labore ullamco laboris nisi...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          		<a href="#!" class="news">
+          			<div class="row row-1">
+          				<div class="col-auto">
+          					<div class="w-18"></div>
+          				</div>
+          				<div class="col">
+          					<span class="d-block title">Ullamco laboris nisi DuPage County Commissioner sed do eiusmod tempor incididunt ut labor...</span>
+          					<span class="d-block">DuPage Policy Journal</span>
+          				</div>
+          				<div class="col-2 date">Jan. 14, 2021</div>
+          			</div>
+          		</a>
+          	</div>
           </div>
         </div>
-      </form>
-			<div class="ml-auto position-relative d-inline-block mr-3 mr-sm-5">
-				<a href="#!" id="reportrange">
-					<span></span>
-				</a>
-				<i class="fas fa-chevron-right"></i>
-			</div>
-			<div class="dropdown dropdown-1">
-				<a href="#!" class="avatar dropdown-toggle ml-3 wave2" data-toggle="dropdown" style="background-image: url(img/avatar.jpg)"></a>
-        <div class="dropdown-menu dropdown-menu-right">
-          <a href="#!" class="dropdown-item">Edit Profile</a>
-          <a href="#!" class="dropdown-item d-flex align-items-center"><span>Inbox</span><span class="badge badge-danger ml-auto">2</span></a>
-          <a href="#!" class="dropdown-item">Calendar</a>
-          <a href="#!" class="dropdown-item">Setting</a>
-					<label class="switch-wrap d-none mb-0">
-						<span>Pitches Fixed</span>
-						<input type="checkbox" id="sidebar-switcher">
-						<span class="lever"></span>
-					</label>
-					<label class="switch-wrap">
-						<span>Dark Mode</span>
-						<input type="checkbox" id="dark-mode">
-						<span class="lever"></span>
-					</label>
-          <div class="dropdown-divider"></div>
-          <a href="#!" class="dropdown-item">Log Out</a>
-        </div>
-			</div>
-			<button class="sandwich ml-3 d-none" id="sandwich-2">
+      </div>
+    </form>
+		<div class="ml-auto position-relative d-inline-block mr-3 mr-sm-5">
+			<a href="#!" id="reportrange">
 				<span></span>
-			</button>
-		</header>
+			</a>
+			<i class="fas fa-chevron-right"></i>
+		</div>
+		<div class="dropdown dropdown-1">
+			<a href="#!" class="avatar dropdown-toggle ml-3 wave2" data-toggle="dropdown" style="background-image: url(img/avatar.jpg)"></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="#!" class="dropdown-item">Edit Profile</a>
+        <a href="#!" class="dropdown-item d-flex align-items-center"><span>Inbox</span><span class="badge badge-danger ml-auto">2</span></a>
+        <a href="#!" class="dropdown-item">Calendar</a>
+        <a href="#!" class="dropdown-item">Setting</a>
+				<label class="switch-wrap d-none mb-0">
+					<span>Pitches Fixed</span>
+					<input type="checkbox" id="sidebar-switcher">
+					<span class="lever"></span>
+				</label>
+				<label class="switch-wrap">
+					<span>Dark Mode</span>
+					<input type="checkbox" id="dark-mode">
+					<span class="lever"></span>
+				</label>
+        <div class="dropdown-divider"></div>
+        <a href="#!" class="dropdown-item">Log Out</a>
+      </div>
+		</div>
+		<button class="sandwich ml-3 d-none" id="sandwich-2">
+			<span></span>
+		</button>
+	</header>
 
 	<div class="w-1550">
 		<section class="content d-flex flex-column">
@@ -1744,6 +1929,7 @@
 		<script src="libs/Popper/popper.js-1.14.7.js"></script>
 		<script src="libs/Bootstrap/bootstrap-4.3.1.js"></script>
 		<script src="libs/OwlCarousel/OwlCarousel-22.3.4.js"></script>
+		<script src="libs/Select2/select2.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 		<script src="libs/Waves/node-waves-0.7.6.js"></script>

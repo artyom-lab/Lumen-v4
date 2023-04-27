@@ -54,6 +54,10 @@ $("#sandwich-2").on("click", function() {
   $("html").toggleClass("o-hidden");
 });
 
+$(".link-tablist").on("click", function() {
+  window.dispatchEvent(new Event('resize'));
+});
+
 // DARK-MODE
 
 $('#dark-mode').on('change', function() {
@@ -128,6 +132,11 @@ $(".news-select").on("click", function(){
   $("#v-pills-review-tab").on("click", function(){
     $(this).removeClass("done");
     $("#v-pills-store-tab, #v-pills-quote-tab, #v-pills-monthly-tab").addClass("done");
+  });
+
+  $("select.select2").select2();
+  $("select.search-hide").select2({
+    minimumResultsForSearch: Infinity
   });
 
 // CHECKBOXES
