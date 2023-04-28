@@ -134,10 +134,9 @@ $(".news-select").on("click", function(){
     $("#v-pills-store-tab, #v-pills-quote-tab, #v-pills-monthly-tab").addClass("done");
   });
 
-  $("select.select2").select2();
-  $("select.search-hide").select2({
-    minimumResultsForSearch: Infinity
-  });
+// SELECT
+
+  $('.select-beast').selectize({});
 
 // CHECKBOXES
 

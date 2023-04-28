@@ -555,8 +555,7 @@ h1, .h1
 					background: $bg-darkmode
 			.badge
 				border-radius: 12px
-				width: 19px
-				height: 15px
+				padding: 3px 7px
 				background: $color-badge
 		.switch-wrap 
 			transition: $transition
@@ -2128,7 +2127,7 @@ h1, .h1
 						width: 10px	
 						height: 10px
 						background: $color-checkbox
-						border: 2px solid #fff
+						border: 1px solid #fff
 
 .form-store
 	input
@@ -2268,97 +2267,95 @@ h1, .h1
 		border-radius: 5px
 		font-weight: 500
 
-.select2-container
-	display: block
-	width: auto !important
-	.select2-selection--single
-		background: $color-white
-		border: 1px solid $color-border-2
-		padding: 0px 12px
-		transition: $transition
+.select-beast
+	~ .selectize-control
 		height: 40px
-		box-shadow: 0 2px 3px rgba(0, 0, 0, .15)
-		.dark-mode &
-			background: $bg-darkmode
-			border: 1px solid $color-rgba
-		.select2-selection__rendered
-			padding-left: 0
-			padding-right: 0
-	.selection
-		display: block
-.select2-container--default .select2-selection--single
-	border-radius: 5px
-	.select2-selection__rendered
-		color: $color-black
-		line-height: 40px
-		font-size: 12px
-		.dark-mode &
-			color: $color-white
-	.select2-selection__arrow
-		display: none
-.select2-results__options
-	> li:first-child:not([role="alert"])
-		display: none
-.select2-container--open 
-	.select2-dropdown
-		border: 1px solid $color-border-2
-		border-radius: 5px
-		overflow: hidden
-		padding: 4px
-		top: -40px
-		padding: 0
-		z-index: 1039
-		.select2-search--dropdown
-			padding: 0
-			.select2-search__field
-				border: 0
-				border-bottom: 1px solid $color-border-2
-				color: $color-black
-				background: $color-white
-				border-radius: 5px 5px 0 0
-				padding: 4px 12px
-				height: 40px
-				font-size: 12px
-				.dark-mode &
-					color: $color-white
-					background: $bg-darkmode
-		.select2-results
-			padding: 4px
+		.selectize-input
+			border: 1px solid $color-border-2
+			padding: 10px
+			transition: $transition
+			height: 40px
+			box-shadow: none
+			border-radius: 5px
 			background: $color-white
+			color: $color-black
 			.dark-mode &
 				background: $bg-darkmode
-			.select2-results__options
-				max-height: 130px
-				padding: 0 4px
-				&::-webkit-scrollbar
-					width: 4px
-					height: 4px
-				&::-webkit-scrollbar-track
-					background-color: transparent
-					border-radius: 2px
-				&::-webkit-scrollbar-thumb
-					background-color: $color-scroll
-					border-radius: 2px	
-					.dark-mode & 
-						background-color: $color-darkmode2
-				.select2-results__option
-					font-size: 12px
-					padding: 4px 6px
-					white-space: nowrap
-					text-overflow: ellipsis
-					overflow: hidden
-					color: $color-black
-					background: $color-white
+				border: 1px solid $color-rgba
+				color: $color-white
+			&.focus	
+				border-radius: 5px 5px 0 0
+			.item 
+				overflow: hidden
+				vertical-align: middle
+				white-space: nowrap
+				text-overflow: ellipsis
+				max-width: 120px
+			input
+				vertical-align: middle
+				.dark-mode &
+					color: $color-white
+				&::-webkit-input-placeholder
+					color: $color-placeholder
+					font-weight: normal
 					.dark-mode &
+				&::-moz-placeholder
+					color: $color-placeholder
+					font-weight: normal
+				&:-ms-input-placeholder
+					color: $color-placeholder
+					font-weight: normal
+			&:after 
+				display: none
+		.selectize-dropdown
+			color: $color-black
+			border: 1px solid $color-border-2
+			border-radius: 0 0 5px 5px
+			padding: 5px
+			.dark-mode &
+				background: $bg-darkmode
+				border: 1px solid $color-rgba
+				color: $color-white
+			.option 
+				padding-left: 8px
+				padding-right: 8px
+				cursor: pointer
+				font-size: 12px
+				white-space: nowrap
+				text-overflow: ellipsis
+				overflow: hidden
+				border: 1px solid transparent
+				margin-bottom: 2px
+				&:hover, &.active
+					background-color: $bg-body
+					border-radius: 5px
+					border: 1px solid $color-border-2
+					font-weight: bold
+					.dark-mode &
+						background-color: $color-darkmode
+						border: 1px solid $color-rgba
 						color: $color-white
-						background: $bg-darkmode
-				.select2-results__option--highlighted.select2-results__option--selectable
-					background: transparent
-					&:hover, &.select2-results__option--selected
-						background-color: $bg-body
-						border-radius: 5px
-						border: 1px solid $color-border-2
-						font-weight: bold
-						.dark-mode & 
-							background-color: $color-darkmode
-							border: 1px solid $color-rgba
+
+
+.selectize-dropdown-content
+	overflow: auto
+	max-height: 130px
+	padding-right: 4px
+	&::-webkit-scrollbar
+		width: 4px
+		height: 4px
+	&::-webkit-scrollbar-track
+		background-color: transparent
+		border-radius: 2px
+	&::-webkit-scrollbar-thumb
+		background-color: $color-scroll
+		border-radius: 2px
+		.dark-mode &
+			background-color: $color-darkmode2
+	.dropdown-item 
+		padding: 5px 7px
+		font-size: 12px
+		&:active 
+			background: $color-white
+		&:hover 
+			font-weight: bold
