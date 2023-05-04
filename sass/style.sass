@@ -2231,7 +2231,7 @@ h1, .h1
 	width: 220px
 	top: 62px
 	bottom: 0
-	padding: 15px 10px 15px 60px
+	padding: 15px 10px 130px 60px
 	left: -220px
 	max-height: 100vh
 	color: $color-sidebar
@@ -2242,6 +2242,10 @@ h1, .h1
 	z-index: 1039
 	transition: $transition
 	background-color: $bg-body
+	flex-grow: 1
+	overflow: auto
+	&::-webkit-scrollbar
+		display: none
 	.dark-mode &
 		background: $color-darkmode
 		color: $color-white
