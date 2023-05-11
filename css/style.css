@@ -99,6 +99,8 @@ body {
   @media (min-width: 1200px) {
     body.body-2 {
       padding-right: 0; } }
+  body.body-0 {
+    padding: 0 !important; }
 
 * {
   outline: none !important; }
@@ -2032,6 +2034,10 @@ h1, .h1 {
   padding: 10px 16px;
   transition: 0.3s;
   border-radius: 8px; }
+  .btn-update.btn-signin {
+    font-size: 16px;
+    padding: 13px 16px;
+    font-weight: bold; }
 
 .btn-cancel {
   font-size: 13px;
@@ -2304,5 +2310,41 @@ h1, .h1 {
       background: #FFF; }
     .selectize-dropdown-content .dropdown-item:hover {
       font-weight: bold; }
+
+.login-box {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 16px; }
+  .login-box .login {
+    max-width: 325px;
+    width: 100%; }
+
+.form-login label {
+  margin-bottom: 0; }
+  .form-login label .form-control {
+    height: 65px;
+    padding: 22px;
+    background: #FFF;
+    font-size: 13px;
+    color: #000;
+    border-radius: 0;
+    border-color: #ced4da; }
+    .form-login label .form-control::-webkit-input-placeholder {
+      color: #000; }
+    .form-login label .form-control::-moz-placeholder {
+      color: #000; }
+    .form-login label .form-control:-ms-input-placeholder {
+      color: #000; }
+    .form-login label .form-control:focus {
+      box-shadow: none; }
+  .form-login label:first-child .form-control {
+    border-radius: 8px 8px 0 0; }
+  .form-login label:last-child .form-control {
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+  .form-login label:only-child .form-control {
+    border-radius: 8px; }
 
 /*# sourceMappingURL=style.css.map */
