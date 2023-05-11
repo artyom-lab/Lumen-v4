@@ -2322,7 +2322,7 @@ h1, .h1 {
     width: 100%; }
 
 .form-login label {
-  margin-bottom: 0; }
+  margin-bottom: -1px; }
   .form-login label .form-control {
     height: 65px;
     padding: 22px;
@@ -2330,7 +2330,7 @@ h1, .h1 {
     font-size: 13px;
     color: #000;
     border-radius: 0;
-    border-color: #ced4da; }
+    border: 1px solid #ced4da; }
     .form-login label .form-control::-webkit-input-placeholder {
       color: #000; }
     .form-login label .form-control::-moz-placeholder {
