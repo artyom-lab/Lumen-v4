@@ -349,6 +349,13 @@ h1, .h1
 				&:before 
 					.dark-mode & 
 						background: $bg-darkmode
+			&.product
+				&:before 
+					background: $color-blue
+				&.active
+					&:before 
+						.dark-mode & 
+							background: $color-blue
 		.select-user
 			padding: 8px 0
 			position: relative
@@ -465,6 +472,7 @@ h1, .h1
 	width: 20px
 	img
 		width: 20px
+		border-radius: 100px
 
 .sidebar-2
 	width: 300px
